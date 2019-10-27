@@ -9,7 +9,17 @@
 </head>
 
 <body>
+    QR Content <input id="content">Image size:<input type="number" id="size" value="100">
+    <button onclick="qr(document.getElementById('content').value, documentGetElementById('size').value)">Make QR
+    </button>
 
+    <script>
+        function qr(content, size) {
+            document.getElementById('output').innerHTML = "<img src="
+            https: //api.qrserver.com/v1/create-qr-code/?data="+content+"&size="+size+"x"+size+"">";
+        }
+    </script>
+    <div id="output">Miejsce na QR Codes</div>
 </body>
 
 </html>
